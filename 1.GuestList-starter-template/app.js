@@ -27,14 +27,7 @@ new Vue(
                     this.eventCapacityPercentage=this.guestName.length/(this.eventCapacity/100)
                 }
             },
-            callMethod : function () {
-                this.appStyles.marginTop='200px';
-                this.appStyles.color='pink';
-            },
-            test: function () {
-                console.log('test  method')
 
-            }
         },
         computed:{
             sortNames: function () {
@@ -42,8 +35,10 @@ new Vue(
                 return this.guestName.sort()
 
             },
-            superTest: function () {
-                console.log('test computed ')
+
+        },watch:{
+            guestName: function (data) {
+                console.log('watch trgger')
 
             }
         }
