@@ -26,6 +26,11 @@ new Vue(
                     this.newNameText = ''
                     this.eventCapacityPercentage=this.guestName.length/(this.eventCapacity/100)
                 }
+
+                    
+                } ,
+                keyPressed:function () {
+                console.log('key pressed')
             },
 
         },
