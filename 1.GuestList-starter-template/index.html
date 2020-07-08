@@ -15,9 +15,9 @@
 <div id="app">
     <div class="container">
 
-        <div class="row" >
+        <div class="row" :style="appStyles">
             <div class="col-sm-12 text-center">
-                <h1>Guest List</h1>
+                <h1 >Guest List</h1>
             </div>
         </div>
 
@@ -40,6 +40,9 @@
                                    placeholder="Jane Doe"
                                    v-model="newNameText">
                             <input type="submit"  class="btn btn-primary">
+                            <button @click ="callMethod"> call a method</button>
+                            {{test()}}
+                            {{superTest}}
                         </form>
                         {{newNameText}}
                     </div>
@@ -48,7 +51,7 @@
         </div>
 
         <div class="row">
-            <div class="col-sm-12">d
+            <div class="col-sm-12">
                 <div class="card">
                     <div class="card-header">
                         Attending ({{guestName.length}} /{{eventCapacity}})
@@ -58,7 +61,7 @@
                     <div class="card-block">
                         <div v-if="guestName.length >0">
                             <div class="card-success rounded name-box"
-                                 v-for="name in guestName"
+                                 v-for="name in sortNames"
                             >
                                 {{name.toUpperCase()}}
                             </div>

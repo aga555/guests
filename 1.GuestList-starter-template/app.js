@@ -12,6 +12,7 @@ new Vue(
 
             appStyles:{
                 marginTop:'25px',
+                color:'blue'
             },
             eventCapacity:10,
             eventCapacityPercentage:0,
@@ -19,11 +20,31 @@ new Vue(
         },
         methods: {
             formSubmitted: function () {
+                console.log('method');
                 if (this.newNameText.length > 0 && this.eventCapacityPercentage <100) {
                     this.guestName.push(this.newNameText)
                     this.newNameText = ''
                     this.eventCapacityPercentage=this.guestName.length/(this.eventCapacity/100)
                 }
+            },
+            callMethod : function () {
+                this.appStyles.marginTop='200px';
+                this.appStyles.color='pink';
+            },
+            test: function () {
+                console.log('test  method')
+
+            }
+        },
+        computed:{
+            sortNames: function () {
+                console.log('computed');
+                return this.guestName.sort()
+
+            },
+            superTest: function () {
+                console.log('test computed ')
+
             }
         }
     });
