@@ -15,16 +15,16 @@
 <div id="app">
     <div class="container">
 
-        <div class="row"  :class="formSubmitClass">
+        <div class="row" >
             <div class="col-sm-12 text-center">
                 <h1>Guest List</h1>
             </div>
         </div>
 
-        <div class="row" :style="appStyles">
+        <div class="row">
             <div class="col-sm-12">
                 <div class="card">
-                    <div class="card-header" :class="formSubmitClass">
+                    <div class="card-header" >
                         {{event.eventDate}}
                     </div>
                     <div class="card-block">
@@ -39,7 +39,7 @@
                             <input type="text" id="nameInput" class="form-control mb-2 mr-sm-2 mb-sm-0"
                                    placeholder="Jane Doe"
                                    v-model="newNameText">
-                            <input type="submit" :class="formSubmitClass" class="btn btn-primary">
+                            <input type="submit"  class="btn btn-primary">
                         </form>
                         {{newNameText}}
                     </div>
@@ -47,11 +47,13 @@
             </div>
         </div>
 
-        <div class="row":class="formSubmitClass">
-            <div class="col-sm-12">
+        <div class="row">
+            <div class="col-sm-12">d
                 <div class="card">
                     <div class="card-header">
-                        Attending ({{guestName.length}})
+                        Attending ({{guestName.length}} /{{eventCapacity}})
+                        <br>
+                        <progress :style="{width: eventCapacityPercentage +'%'}" > </progress>
                     </div>
                     <div class="card-block">
                         <div v-if="guestName.length >0">
