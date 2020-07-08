@@ -19,6 +19,15 @@
                 <h1 >{{appName}}</h1>
             </div>
         </div>
+
+        <div>
+            <ul>
+                <template v-for="navLink in navLinks">
+                    <li>{{navLink.name}}</li>
+                    <li>{{navLink.id}}</li>
+                </template>
+            </ul>
+        </div>
     </div>
 
 <div id="app">
