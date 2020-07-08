@@ -49,3 +49,11 @@ new Vue(
             }
         }
     });
+new Vue(
+    {
+        el:'#navigation',
+        data:{
+            appName:"Guests List "
+        }
+    }
+)
