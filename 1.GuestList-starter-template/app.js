@@ -44,8 +44,8 @@ new Vue(
             }
         },
         filters:{
-            toLowerCase: function (value) {
-                return value.toLowerCase()
+            formatName: function (value) {
+                return value.slice(0,1).toUpperCase() +value.slice(1).toLowerCase()
             }
         }
     });

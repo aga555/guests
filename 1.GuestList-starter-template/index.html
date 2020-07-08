@@ -61,9 +61,10 @@
                     <div class="card-block">
                         <div v-if="guestName.length >0">
                             <div class="card-success rounded name-box"
-                                 v-for="name in sortNames"
+                                 v-for=" (name, index) in sortNames"
+                                 :key="name"
                             >
-                                {{name | toLowerCase}}
+                                {{name | formatName}} ({{index}})
                             </div>
                         </div>
                         <div v-else>
