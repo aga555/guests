@@ -39,10 +39,6 @@
                             <input type="text" id="nameInput" class="form-control mb-2 mr-sm-2 mb-sm-0"
                                    placeholder="Jane Doe"
                                    v-model="newNameText"
-                            @keyup.32="keyPressed"
-                                   @keyup.enter="keyPressed"
-
-
                             >
                             <input type="submit"  class="btn btn-primary">
 
@@ -67,7 +63,7 @@
                             <div class="card-success rounded name-box"
                                  v-for="name in sortNames"
                             >
-                                {{name.toUpperCase()}}
+                                {{name | toLowerCase}}
                             </div>
                         </div>
                         <div v-else>
