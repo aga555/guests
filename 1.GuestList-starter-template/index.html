@@ -23,12 +23,8 @@
         <div>
             <ul>
                 <template v-for="navLink in navLinks">
-                    <li style="color: limegreen"> {{navLinks}}</li>
-                    <li style="color: orangered">{{navLink}}</li>
-                    <li style="color: royalblue">{{navLink.name}} {{navLink.id}} </li>
-
-                    <li v-for="value in navLink " style="color: hotpink">{{value}}</li>
-                    <hr class="strong">
+<li><a :href="navLink.url" target="_blank"> {{navLink.name}}</a></li>
+                   <hr class="strong">
 
                 </template>
             </ul>

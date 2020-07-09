@@ -55,10 +55,10 @@ new Vue(
         data:{
             appName:"Guests List ",
             navLinks:[
-                {name:"Home",id:1},
-                {name:"Upcoming event",id:2},
-                {name:"Guest benefits",id:3},
-                {name:"Latest news",id:4},
+                {name:"Home",id:1, url:"https://www.gooogle.com"},
+                {name:"Upcoming event",id:2, url:"https://wwww.wp.pl"},
+                {name:"Guest benefits",id:3 ,url:"https://wwww.interia.pl"},
+                {name:"Latest news",id:4,url:"https://www.tvn.pl"},
 
             ]
 
