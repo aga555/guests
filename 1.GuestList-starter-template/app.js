@@ -55,7 +55,7 @@ new Vue(
         data:{
             appName:"Guests List ",
             navLinks:[
-                {name:"Home",id:1, url:"https://www.gooogle.com"},
+                {name:"Home",id:1, url:"https://www.google.pl"},
                 {name:"Upcoming event",id:2, url:"https://wwww.wp.pl"},
                 {name:"Guest benefits",id:3 ,url:"https://wwww.interia.pl"},
                 {name:"Latest news",id:4,url:"https://www.tvn.pl"},

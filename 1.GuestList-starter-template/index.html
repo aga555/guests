@@ -14,28 +14,32 @@
 <div class="container">
 
     <div id="navigation">
-        <div class="row" >
+        <div class="row">
             <div class="col-sm-12 text-center">
-                <h1 >{{appName}}</h1>
+                <h1>{{appName}}</h1>
+                <hr>
             </div>
         </div>
 
         <div>
-            <ul>
-                <template v-for="navLink in navLinks">
-<li><a :href="navLink.url" target="_blank"> {{navLink.name}}</a></li>
-                   <hr class="strong">
+            <ul class="nav">
+                <div v-for="navLink in navLinks" :key="navLink.id">
+                    <li class="nav-item"><a class="nav-link" :href="navLink.url" target="_blank"> {{navLink.name}}</a>
+                    </li>
 
-                </template>
+
+                </div>
             </ul>
         </div>
+
+        <hr>
     </div>
 
-<div id="app">
+    <div id="app">
         <div class="row">
             <div class="col-sm-12">
                 <div class="card">
-                    <div class="card-header" >
+                    <div class="card-header">
                         {{event.eventDate}}
                     </div>
                     <div class="card-block">
@@ -51,7 +55,7 @@
                                    placeholder="Jane Doe"
                                    v-model="newNameText"
                             >
-                            <input type="submit"  class="btn btn-primary">
+                            <input type="submit" class="btn btn-primary">
 
 
                         </form>
@@ -67,7 +71,7 @@
                     <div class="card-header">
                         Attending ({{guestName.length}} /{{eventCapacity}})
                         <br>
-                        <progress :style="{width: eventCapacityPercentage +'%'}" > </progress>
+                        <progress :style="{width: eventCapacityPercentage +'%'}"></progress>
                     </div>
                     <div class="card-block">
                         <div v-if="guestName.length >0">
