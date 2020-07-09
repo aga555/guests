@@ -16,7 +16,7 @@
     <div id="navigation">
         <div class="row">
             <div class="col-sm-12 text-center">
-                <h1>{{appName}}</h1>
+                <h1 @click.prevent="changeTitle" ref="name">{{appName}}</h1>
                 <hr>
             </div>
         </div>

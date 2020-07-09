@@ -1,4 +1,4 @@
-new Vue(
+ var vm1= new Vue(
     {
         el: '#app',
         data: {
@@ -49,7 +49,7 @@ new Vue(
             }
         }
     });
-new Vue(
+var vm2= new Vue(
     {
         el:'#navigation',
         data:{
@@ -62,6 +62,12 @@ new Vue(
 
             ]
 
+        },
+        methods:{
+          changeTitle:function () {
+              this.$refs.name.innerHTML='title changed'
+          }
         }
     }
 )
+
