@@ -27,6 +27,10 @@
                     this.eventCapacityPercentage=this.guestName.length/(this.eventCapacity/100)
                 }
                 } ,
+            removeGuest: function (index ){
+                this.guestName.splice(index,1)
+
+            }
 
 
         },
@@ -70,4 +74,6 @@ var vm2= new Vue(
         }
     }
 )
+
+
 
